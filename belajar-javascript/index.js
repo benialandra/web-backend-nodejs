@@ -1,3 +1,4 @@
+// TASK 1
 // /**
 //  * TODO 1 (Tiger.js):
 //  * Ekspor nilai dari class Tiger
@@ -40,6 +41,9 @@
 // module.exports = { fight,myTiger, myWolf, result }
 // console.log( fight,myTiger, myWolf, result)
 
+
+//TASK 2
+
 // try {
 //     console.log("Awal blok try");
 //     console.log("Akhir blok try");
@@ -55,6 +59,8 @@
 //     console.log("Akan tetap dieksekusi");
 //   }
 
+
+// TASK 3
 // const json = '{ "name": "Yoda", "age": 20 }';
 
 // try {
@@ -166,6 +172,10 @@ Unexpected token b in JSON at position 2
 //   Invalid data: 'name' is required.
 //   */
 
+
+
+//TASK 4
+
 /**
  * Saat ini, Anda sudah memiliki fungsi detectTriangle yang berguna untuk
  * mendeteksi jenis segitiga berdasarkan nilai argumen.
@@ -260,6 +270,8 @@ Unexpected token b in JSON at position 2
 // };
 
 
+
+// TASK 5
 // const { promisify } = require('util');
 
 // function getProvinces(countryId) {
@@ -326,24 +338,26 @@ Unexpected token b in JSON at position 2
 //   }
    
 //   watchMovie();
-const { buyTollRoadCard, topUpBalance, useTollRoad } = require('./utils');
 
-async function getTollAccess() {
-  try {
-    const card = await buyTollRoadCard(25);
-    console.log('Toll road card bought');
-    console.log(card);
+//TASK 6
+// const { buyTollRoadCard, topUpBalance, useTollRoad } = require('./utils');
 
-    const cardWithBalance = await topUpBalance(card, 10);
-    console.log('Toll road card topped up');
-    console.log(cardWithBalance);
+// async function getTollAccess() {
+//   try {
+//     const card = await buyTollRoadCard(25);
+//     console.log('Toll road card bought');
+//     console.log(card);
 
-    await useTollRoad(cardWithBalance);
-    console.log('Toll road used');
-  } catch (error) {
-    console.log(error.message);
-  }
-}
+//     const cardWithBalance = await topUpBalance(card, 10);
+//     console.log('Toll road card topped up');
+//     console.log(cardWithBalance);
 
-// Jalankan fungsi getTollAccess()
-getTollAccess();
+//     await useTollRoad(cardWithBalance);
+//     console.log('Toll road used');
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// }
+
+// // Jalankan fungsi getTollAccess()
+// getTollAccess();
