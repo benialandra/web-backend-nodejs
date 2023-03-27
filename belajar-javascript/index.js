@@ -403,36 +403,33 @@ Unexpected token b in JSON at position 2
 //  * Kopi Tubruk telah dibuat!
 //  */
 
-// const { EventEmitter } = require('events');
-
-// const myEventEmitter = new EventEmitter();
-
-// const makeCoffee = ({ name }) => {
-//     console.log(`Kopi ${name} telah dibuat!`);
-// };
-
-// const makeBill = ({ price }) => {
-//     console.log(`Bill sebesar ${price} telah dibuat!`);
-// }
-
-// myEventEmitter.on('coffee-order', makeCoffee);
-// myEventEmitter.on('coffee-order', makeBill);
-
-// myEventEmitter.emit('coffee-order', { name: 'Tubruk', price: 15000 });
-
-// /**
-//  * output:
-//  * Kopi Tubruk telah dibuat!
-//  * Bill sebesar 15000 telah dibuat!
-//  */
-
 const { EventEmitter } = require('events');
 
 const myEventEmitter = new EventEmitter();
 
-const birthdayEventListener = (name) => {
-    console.log(`Happy birthday ${name}!`);
-}
-myEventEmitter.on('coffee-order', makeCoffee);
-myEventEmitter.on('coffee-order', makeBill);
-myEventEmitter.emit('coffee-order', { name: 'Tubruk', price: 15000 });
+const yourName = ({ name }) => {
+    console.log(`Halo ${name} selamat Ulang tahun`);
+};
+
+// const makeParty = ({ birthday }) => {
+//     console.log(`Bill sebesar ${birthday} telah dibuat!`);
+// }
+
+// myEventEmitter.on('coffee-order', makeCoffee);
+myEventEmitter.on('birthDay', yourName);
+
+myEventEmitter.emit('birthDay', { name: 'Beni'});
+
+/**
+ * output:
+ * Kopi Tubruk telah dibuat!
+ * Bill sebesar 15000 telah dibuat!
+ */
+
+// const { EventEmitter } = require('events');
+
+// const myEventEmitter = new EventEmitter();
+
+// const birthdayEventListener = (name) => {
+//     console.log(`Happy birthday ${name}!`);
+// }
