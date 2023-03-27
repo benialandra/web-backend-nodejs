@@ -403,33 +403,93 @@ Unexpected token b in JSON at position 2
 //  * Kopi Tubruk telah dibuat!
 //  */
 
-const { EventEmitter } = require('events');
-
-const myEventEmitter = new EventEmitter();
-
-const yourName = ({ name }) => {
-    console.log(`Halo ${name} selamat Ulang tahun`);
-};
-
-// const makeParty = ({ birthday }) => {
-//     console.log(`Bill sebesar ${birthday} telah dibuat!`);
-// }
-
-// myEventEmitter.on('coffee-order', makeCoffee);
-myEventEmitter.on('birthDay', yourName);
-
-myEventEmitter.emit('birthDay', { name: 'Beni'});
-
-/**
- * output:
- * Kopi Tubruk telah dibuat!
- * Bill sebesar 15000 telah dibuat!
- */
-
 // const { EventEmitter } = require('events');
 
 // const myEventEmitter = new EventEmitter();
 
-// const birthdayEventListener = (name) => {
-//     console.log(`Happy birthday ${name}!`);
-// }
+// const yourName = ({ name }) => {
+//     console.log(`Halo ${name} selamat Ulang tahun`);
+// };
+
+// // const makeParty = ({ birthday }) => {
+// //     console.log(`Bill sebesar ${birthday} telah dibuat!`);
+// // }
+
+// // myEventEmitter.on('coffee-order', makeCoffee);
+// myEventEmitter.on('birthDay', yourName);
+
+// myEventEmitter.emit('birthDay', { name: 'Beni'});
+
+// /**
+//  * output:
+//  * Kopi Tubruk telah dibuat!
+//  * Bill sebesar 15000 telah dibuat!
+//  */
+
+// // const { EventEmitter } = require('events');
+
+// // const myEventEmitter = new EventEmitter();
+
+// // const birthdayEventListener = (name) => {
+// //     console.log(`Happy birthday ${name}!`);
+// // }
+
+
+// const fs = require('fs');
+
+// const data = fs.readFileSync('task.txt', 'UTF-8');
+// console.log(data);
+
+
+// const fs = require('fs');
+
+// const readableStream = fs.createReadStream('./task.txt', {
+//     highWaterMark: 10
+// });
+
+// readableStream.on('readable', () => {
+//     try {
+//         process.stdout.write(`[${readableStream.read()}]`);
+//     } catch(error) {
+//         // catch the error when the chunk cannot be read.
+//     }
+// });
+
+// readableStream.on('end', () => {
+//     console.log('Done');
+// });
+
+// const fs = require('fs');
+
+// const writableStream = fs.createWriteStream('text.txt');
+
+// writableStream.write('Ini merupakan teks baris pertama!\n');
+// writableStream.write('Ini merupakan teks baris kedua!\n');
+// writableStream.end('Akhir dari writable stream!');
+
+
+
+
+//task 7
+// const fs = require('fs');
+// const { createReadStream, createWriteStream } = require('fs');
+// const { pipeline } = require('stream');
+
+// // Buat stream untuk membaca berkas input.txt
+// const readStream = createReadStream('task.txt', { encoding: 'utf8' });
+
+// // Buat stream untuk menulis ke berkas output.txt
+// const writeStream = createWriteStream('text.txt', { encoding: 'utf8' });
+
+// // Gunakan pipeline() untuk menghubungkan stream pembaca dan penulis
+// pipeline(
+//   readStream, // stream pembaca
+//   writeStream, // stream penulis
+//   (err) => {
+//     if (err) {
+//       console.error('Gagal menulis berkas:', err);
+//     } else {
+//       console.log('Teks berhasil ditulis pada berkas text.txt');
+//     }
+//   }
+// );
