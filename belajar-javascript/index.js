@@ -330,13 +330,13 @@ Unexpected token b in JSON at position 2
 //       const money = await withDrawMoney(10);
 //       const ticket = await buyCinemaTicket(money);
 //       const result = await goInsideCinema(ticket);
-   
+
 //       console.log(result);
 //     } catch (error) {
 //       console.log(error.message);
 //     }
 //   }
-   
+
 //   watchMovie();
 
 //TASK 6
@@ -361,3 +361,78 @@ Unexpected token b in JSON at position 2
 
 // // Jalankan fungsi getTollAccess()
 // getTollAccess();
+
+// const message = (name) => {
+//     console.log(`Hello ${name}`);
+//  }
+
+// //  message('JavaScript');
+// const initialMemoryUsage = 100 
+// const yourName = "Beni"
+// const environment = 0
+
+// for(let i = 0; i <= 10000; i++) {
+// // Proses looping ini akan membuat penggunaan memori naik
+// }
+
+// const currentMemoryUsage = initialMemoryUsage
+
+// console.log(`Hai, ${yourName}`);
+// console.log(`Mode environment: ${environment}`)
+// console.log(`Penggunaan memori dari ${initialMemoryUsage} naik ke ${currentMemoryUsage}`);
+// var _ = require('lodash');
+
+// const myOddEvenArray = _.partition([1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], (n) => n % 2);
+
+// console.log(myOddEvenArray);
+// const { EventEmitter } = require('events');
+
+// const myEventEmitter = new EventEmitter();
+
+// const makeCoffee = ({ name }) => {
+//     console.log(`Kopi ${name} telah dibuat!`);
+// };
+
+// myEventEmitter.on('coffee-order', makeCoffee);
+
+// // Memicu event 'coffee-order' terjadi.
+// myEventEmitter.emit('coffee-order', { name: 'Tubruk' });
+
+// /**
+//  * output:
+//  * Kopi Tubruk telah dibuat!
+//  */
+
+// const { EventEmitter } = require('events');
+
+// const myEventEmitter = new EventEmitter();
+
+// const makeCoffee = ({ name }) => {
+//     console.log(`Kopi ${name} telah dibuat!`);
+// };
+
+// const makeBill = ({ price }) => {
+//     console.log(`Bill sebesar ${price} telah dibuat!`);
+// }
+
+// myEventEmitter.on('coffee-order', makeCoffee);
+// myEventEmitter.on('coffee-order', makeBill);
+
+// myEventEmitter.emit('coffee-order', { name: 'Tubruk', price: 15000 });
+
+// /**
+//  * output:
+//  * Kopi Tubruk telah dibuat!
+//  * Bill sebesar 15000 telah dibuat!
+//  */
+
+const { EventEmitter } = require('events');
+
+const myEventEmitter = new EventEmitter();
+
+const birthdayEventListener = (name) => {
+    console.log(`Happy birthday ${name}!`);
+}
+myEventEmitter.on('coffee-order', makeCoffee);
+myEventEmitter.on('coffee-order', makeBill);
+myEventEmitter.emit('coffee-order', { name: 'Tubruk', price: 15000 });
